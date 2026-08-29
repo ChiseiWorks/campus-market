@@ -1,0 +1,48 @@
+/* 校园集市 全局变量（uni.scss 中变量全页面自动可用） */
+
+/* 品牌主色（淘宝橙系） */
+$cm-primary: #FF6A00;        /* 主题橙 */
+$cm-primary-light: #FF9A3D;  /* 浅橙（旧变量名保留兼容） */
+
+/* 品牌渐变 */
+$cm-gradient-start: #FF8F1F;
+$cm-gradient-end:   #FF5000;
+$cm-gradient: linear-gradient(135deg, $cm-gradient-start, $cm-gradient-end);
+
+/* 橙系浅底（标签/面板/气泡） */
+$cm-orange-bg:   #FFF3E8;    /* 浅橙底 */
+$cm-orange-deep-bg: #FFE8D6; /* 深一点的浅橙底 */
+
+/* 语义色 */
+$cm-success: #07C160;
+$cm-warning: #FF976A;
+$cm-danger:  #EE0A24;
+$cm-price:   #FF5000;        /* 价格橙 */
+
+/* 中性色 */
+$cm-text:        #323233;
+$cm-text-sub:    #969799;
+$cm-border:      #EBEDF0;
+$cm-bg:          #F5F5F5;
+$cm-card-bg:     #FFFFFF;
+
+/* 尺寸 */
+$cm-radius: 16rpx;
+$cm-gap: 24rpx;
+
+/* 卡片阴影 */
+$cm-card-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+
+/* 常用 mixin */
+@mixin cm-card {
+  background: $cm-card-bg;
+  border-radius: $cm-radius;
+  box-shadow: $cm-card-shadow;
+}
+
+/* 橙渐变胶囊按钮 */
+@mixin cm-gradient-btn {
+  background: $cm-gradient;
+  color: #fff;
+  border-radius: 48rpx;
+}

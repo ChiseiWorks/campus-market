@@ -1,0 +1,37 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+target/
+build/
+*.class
+*.jar
+*.war
+
+# ===== 本地工具链（JDK/Maven 便携包，体积大，不入库）=====
+tools/
+
+# ===== 运行时产物 =====
+uploads/
+*.log
+logs/
+
+# ===== 压缩包与临时文件 =====
+*.zip
+*.tar.gz
+*.tmp
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+.settings/
+.project
+.classpath
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+
+# ===== 本地私密配置（如以后新建 application-local.yml 存放真实密码）=====
+application-local.yml
+.env

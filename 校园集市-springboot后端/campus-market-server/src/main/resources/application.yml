@@ -1,0 +1,55 @@
+# =====================================================================
+# 校园集市 · 后端配置
+# 数据库脚本见：《校园集市-数据库建表脚本.sql》（库名 campus_market）
+# =====================================================================
+server:
+  port: 8080
+  # 注意：不加 context-path。接口文档约定 Base URL 为 /api，
+  # 各 Controller 上直接写完整路径（如 /api/errand），前端 BASE_URL = http://host:8080/api
+
+spring:
+  application:
+    name: campus-market-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # tinyInt1isBit=false：防止 JDBC 把 TINYINT(1) 映射成 Boolean（本项目状态字段全是 TINYINT）
+    # 本机部署：使用便携版 MySQL（3307 端口，避免与你已有的 MySQL 3306 冲突）
+    # 若改用你自己安装的 MySQL，把 3307 改回 3306 并修改用户名密码即可
+    url: jdbc:mysql://localhost:3307/campus_market?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&tinyInt1isBit=false
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}   # 本地便携版 MySQL 默认 root/root；生产环境用环境变量 DB_PASSWORD 覆盖
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true   # 下划线转驼峰
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl   # 控制台打印 SQL，答辩演示用
+  global-config:
+    banner: false
+    db-config:
+      logic-delete-field: isDeleted      # 全局逻辑删除字段
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# JWT 配置（secret 至少 32 字节，HS256 要求）
+jwt:
+  # 默认值仅供本地开发；生产环境务必用环境变量 JWT_SECRET 覆盖（至少 32 字节）
+  secret: ${JWT_SECRET:campus-market-jwt-secret-key-for-hs256-must-be-at-least-32-bytes!!}
+  expire-hours: 72
+
+# 文件上传目录（相对项目工作目录，README 有说明）
+file:
+  upload-dir: uploads
+
+# 管理员账号（不走数据库，仅用于 /api/admin/login）
+# 默认值仅供本地开发，生产环境务必用环境变量 ADMIN_USERNAME / ADMIN_PASSWORD 覆盖
+app:
+  admin:
+    username: ${ADMIN_USERNAME:admin}
+    password: ${ADMIN_PASSWORD:admin123}

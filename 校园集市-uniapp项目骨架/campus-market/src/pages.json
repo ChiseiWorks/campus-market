@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "校园集市",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/errand/hall",
+      "style": {
+        "navigationBarTitleText": "跑腿大厅",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/publish/index",
+      "style": {
+        "navigationBarTitleText": "发布"
+      }
+    },
+    {
+      "path": "pages/message/list",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/user/center",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/goods/detail",
+      "style": {
+        "navigationBarTitleText": "商品详情"
+      }
+    },
+    {
+      "path": "pages/goods/publish",
+      "style": {
+        "navigationBarTitleText": "发布闲置"
+      }
+    },
+    {
+      "path": "pages/errand/publish",
+      "style": {
+        "navigationBarTitleText": "发布跑腿"
+      }
+    },
+    {
+      "path": "pages/errand/detail",
+      "style": {
+        "navigationBarTitleText": "跑腿单详情"
+      }
+    },
+    {
+      "path": "pages/order/list",
+      "style": {
+        "navigationBarTitleText": "我的订单"
+      }
+    },
+    {
+      "path": "pages/user/login",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/user/register",
+      "style": {
+        "navigationBarTitleText": "注册"
+      }
+    },
+    {
+      "path": "pages/user/auth",
+      "style": {
+        "navigationBarTitleText": "校园认证"
+      }
+    },
+    {
+      "path": "pages/goods/search",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
+      "path": "pages/goods/my",
+      "style": {
+        "navigationBarTitleText": "我的发布"
+      }
+    },
+    {
+      "path": "pages/errand/my",
+      "style": {
+        "navigationBarTitleText": "我的跑腿"
+      }
+    },
+    {
+      "path": "pages/user/credit",
+      "style": {
+        "navigationBarTitleText": "信用分明细"
+      }
+    },
+    {
+      "path": "pages/user/favorite",
+      "style": {
+        "navigationBarTitleText": "我的收藏"
+      }
+    },
+    {
+      "path": "pages/complaint/index",
+      "style": {
+        "navigationBarTitleText": "投诉"
+      }
+    },
+    {
+      "path": "pages/message/chat",
+      "style": {
+        "navigationBarTitleText": "聊天"
+      }
+    },
+    {
+      "path": "pages/evaluate/index",
+      "style": {
+        "navigationBarTitleText": "评价"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "校园集市",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F7F8FA"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF6A00",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/errand/hall", "text": "跑腿" },
+      { "pagePath": "pages/publish/index", "text": "发布" },
+      { "pagePath": "pages/message/list", "text": "消息" },
+      { "pagePath": "pages/user/center", "text": "我的" }
+    ]
+  }
+}
